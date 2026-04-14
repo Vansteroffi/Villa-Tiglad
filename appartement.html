@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'Appartement — Villa Tiglad · Concarneau</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0d1b2a;
+    --navy-mid: #1a2e42;
+    --navy-light: #243b55;
+    --sand: #e8dfc8;
+    --sand-light: #f5f0e8;
+    --gold: #c9a96e;
+    --gold-light: #e0c89a;
+    --white: #faf9f7;
+    --text-muted: rgba(232,223,200,0.6);
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Jost', system-ui, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); background: var(--navy); color: var(--sand); overflow-x: hidden; }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.2rem 3rem;
+    background: rgba(13,27,42,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201,169,110,0.2);
+  }
+  .nav-logo { display: flex; align-items: center; gap: 0.8rem; text-decoration: none; }
+  .nav-logo img { height: 38px; filter: brightness(0) invert(1); }
+  .nav-brand { font-family: var(--serif); font-size: 1.05rem; font-weight: 300; letter-spacing: 0.25em; color: var(--sand); text-transform: uppercase; }
+  .nav-back { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: gap 0.2s; }
+  .nav-back:hover { gap: 0.8rem; }
+  .nav-back::before { content: '←'; }
+
+  /* ─── HERO GALERIE ─── */
+  .hero-gallery {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 60vh 30vh;
+    gap: 3px;
+    height: 90vh;
+  }
+  .hero-main { grid-column: 1; grid-row: 1 / 3; overflow: hidden; position: relative; cursor: pointer; }
+  .hero-main img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease; }
+  .hero-main:hover img { transform: scale(1.03); }
+  .hero-side { overflow: hidden; position: relative; cursor: pointer; }
+  .hero-side img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease; }
+  .hero-side:hover img { transform: scale(1.04); }
+  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,27,42,0.7) 0%, transparent 50%); pointer-events: none; }
+  .hero-badge { position: absolute; bottom: 2rem; left: 2rem; background: rgba(13,27,42,0.85); border: 1px solid rgba(201,169,110,0.4); backdrop-filter: blur(8px); padding: 1rem 1.5rem; }
+  .badge-tag { font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 0.3rem; }
+  .badge-title { font-family: var(--serif); font-size: 1.8rem; font-weight: 300; color: var(--white); line-height: 1; }
+  .see-all-btn { position: absolute; bottom: 1.2rem; right: 1.2rem; background: rgba(13,27,42,0.9); border: 1px solid rgba(201,169,110,0.4); color: var(--sand); font-family: var(--sans); letter-spacing: 0.18em; font-size: 0.68rem; text-transform: uppercase; padding: 0.7rem 1.2rem; cursor: pointer; transition: background 0.2s, border-color 0.2s; backdrop-filter: blur(8px); }
+  .see-all-btn:hover { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+
+  /* ─── CONTENU PRINCIPAL ─── */
+  .main-content { max-width: 1200px; margin: 0 auto; padding: 5rem 3rem; display: grid; grid-template-columns: 1fr 360px; gap: 6rem; align-items: start; }
+
+  /* ─── INFOS ─── */
+  .listing-tag { font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; display: block; }
+  .listing-title { font-family: var(--serif); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 300; line-height: 1.1; color: var(--white); margin-bottom: 1rem; }
+  .listing-title em { font-style: italic; color: var(--gold-light); }
+  .listing-meta { display: flex; flex-wrap: wrap; gap: 2rem; padding: 1.5rem 0; border-top: 1px solid rgba(201,169,110,0.15); border-bottom: 1px solid rgba(201,169,110,0.15); margin: 1.5rem 0; }
+  .meta-item { display: flex; align-items: center; gap: 0.6rem; }
+  .meta-text { font-size: 0.82rem; color: var(--text-muted); letter-spacing: 0.05em; }
+  .meta-text strong { color: var(--sand); font-weight: 400; }
+
+  .rating-bar { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.5rem; background: rgba(201,169,110,0.08); border: 1px solid rgba(201,169,110,0.2); margin-bottom: 2.5rem; }
+  .rating-score { font-family: var(--serif); font-size: 2rem; font-weight: 300; color: var(--gold); }
+  .rating-label { font-size: 0.78rem; color: var(--text-muted); line-height: 1.6; }
+  .rating-label strong { color: var(--sand); display: block; font-weight: 400; font-size: 0.85rem; }
+
+  .description-section { margin-bottom: 3rem; }
+  .description-section h2 { font-family: var(--serif); font-size: 1.6rem; font-weight: 300; color: var(--white); margin-bottom: 1.2rem; }
+  .description-section h2 em { font-style: italic; color: var(--gold-light); }
+  .description-section p { font-size: 0.92rem; line-height: 1.95; color: var(--text-muted); margin-bottom: 1rem; }
+  .description-section p strong { color: var(--sand); font-weight: 400; }
+  .divider { width: 40px; height: 1px; background: var(--gold); opacity: 0.5; margin: 2rem 0; }
+
+  .amenities-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.8rem; margin-top: 1.5rem; }
+  .amenity-item { display: flex; align-items: center; gap: 0.8rem; font-size: 0.83rem; color: var(--text-muted); padding: 0.7rem 0; border-bottom: 1px solid rgba(201,169,110,0.08); }
+  .amenity-item::before { content: ''; width: 5px; height: 5px; border: 1px solid var(--gold); border-radius: 50%; flex-shrink: 0; }
+
+  .rooms-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1.5rem; }
+  .room-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(201,169,110,0.12); padding: 1.5rem; transition: border-color 0.25s, background 0.25s; }
+  .room-card:hover { border-color: rgba(201,169,110,0.35); background: rgba(201,169,110,0.04); }
+  .room-icon { font-size: 1.3rem; margin-bottom: 0.7rem; opacity: 0.8; display: block; }
+  .room-name { font-family: var(--serif); font-size: 1.05rem; font-weight: 400; color: var(--white); margin-bottom: 0.3rem; }
+  .room-detail { font-size: 0.78rem; color: var(--text-muted); line-height: 1.7; }
+
+  /* ─── BOOKING CARD ─── */
+  .booking-card { position: sticky; top: 90px; background: var(--navy-mid); border: 1px solid rgba(201,169,110,0.25); padding: 2rem; }
+  .booking-card-tag { font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 1.2rem; }
+  .booking-card-title { font-family: var(--serif); font-size: 1.5rem; font-weight: 300; color: var(--white); margin-bottom: 0.5rem; line-height: 1.2; }
+  .booking-capacity { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.8rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(201,169,110,0.15); }
+  .booking-platforms { display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 1.8rem; }
+  .btn-platform { display: block; width: 100%; padding: 1rem 1.5rem; font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; text-align: center; transition: all 0.25s; }
+  .btn-platform-primary { background: var(--gold); color: var(--navy); border: 1px solid var(--gold); }
+  .btn-platform-primary:hover { background: var(--gold-light); }
+  .btn-platform-outline { background: transparent; color: var(--sand); border: 1px solid rgba(232,223,200,0.3); }
+  .btn-platform-outline:hover { border-color: var(--sand); background: rgba(232,223,200,0.05); }
+  .booking-divider { text-align: center; font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin: 1.2rem 0; position: relative; }
+  .booking-divider::before, .booking-divider::after { content: ''; position: absolute; top: 50%; width: 35%; height: 1px; background: rgba(201,169,110,0.2); }
+  .booking-divider::before { left: 0; }
+  .booking-divider::after { right: 0; }
+  .contact-direct { display: flex; flex-direction: column; gap: 0.6rem; }
+  .contact-line { display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 1rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(201,169,110,0.1); text-decoration: none; transition: background 0.2s, border-color 0.2s; }
+  .contact-line:hover { background: rgba(201,169,110,0.07); border-color: rgba(201,169,110,0.3); }
+  .contact-line-label { font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); }
+  .contact-line-value { font-family: var(--serif); font-size: 0.95rem; color: var(--white); }
+  .note { margin-top: 1.5rem; padding: 1rem; background: rgba(201,169,110,0.06); border-left: 2px solid var(--gold); font-size: 0.78rem; line-height: 1.7; color: var(--text-muted); }
+
+  /* ─── GALERIE ─── */
+  .gallery-section { background: var(--navy-mid); border-top: 1px solid rgba(201,169,110,0.12); padding: 5rem 3rem; }
+  .gallery-section-inner { max-width: 1200px; margin: 0 auto; }
+  .gallery-header { margin-bottom: 3rem; }
+  .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px; }
+  .gallery-item { aspect-ratio: 1; overflow: hidden; cursor: pointer; position: relative; background: var(--navy-light); }
+  .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; display: block; }
+  .gallery-item:hover img { transform: scale(1.07); }
+  .gallery-item.wide { grid-column: span 2; aspect-ratio: 2/1; }
+
+  /* ─── LIGHTBOX ─── */
+  .lightbox { display: none; position: fixed; inset: 0; z-index: 1000; background: rgba(7,15,24,0.97); align-items: center; justify-content: center; flex-direction: column; }
+  .lightbox.active { display: flex; }
+  .lightbox-img { max-width: 90vw; max-height: 80vh; object-fit: contain; display: block; }
+  .lightbox-nav { display: flex; align-items: center; gap: 2rem; margin-top: 1.5rem; }
+  .lightbox-btn { background: none; border: 1px solid rgba(201,169,110,0.4); color: var(--sand); font-size: 1.2rem; padding: 0.7rem 1.2rem; cursor: pointer; transition: all 0.2s; }
+  .lightbox-btn:hover { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+  .lightbox-counter { font-family: var(--serif); font-size: 1.2rem; color: var(--text-muted); min-width: 80px; text-align: center; }
+  .lightbox-close { position: absolute; top: 2rem; right: 2rem; background: none; border: 1px solid rgba(201,169,110,0.3); color: var(--sand); padding: 0.6rem 1rem; cursor: pointer; transition: all 0.2s; font-family: var(--sans); letter-spacing: 0.15em; font-size: 0.7rem; text-transform: uppercase; }
+  .lightbox-close:hover { background: rgba(201,169,110,0.1); }
+
+  /* ─── LOCALISATION ─── */
+  .location-section { padding: 5rem 3rem; background: var(--navy); border-top: 1px solid rgba(201,169,110,0.12); }
+  .location-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.3fr; gap: 5rem; align-items: center; }
+  .location-list { list-style: none; margin-top: 1rem; }
+  .location-list li { display: flex; align-items: flex-start; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid rgba(201,169,110,0.1); font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; }
+  .location-list li:last-child { border-bottom: none; }
+  .distance { font-family: var(--serif); font-size: 1.1rem; color: var(--gold); min-width: 3.5rem; font-weight: 300; }
+  .map-embed { width: 100%; aspect-ratio: 4/3; border: 1px solid rgba(201,169,110,0.2); filter: saturate(0.3) brightness(0.7) contrast(1.2); display: block; }
+
+  /* ─── FOOTER ─── */
+  footer { background: #070f18; padding: 2.5rem 3rem; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(201,169,110,0.1); }
+  .footer-brand { font-family: var(--serif); font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); }
+  .footer-links { display: flex; gap: 2rem; }
+  .footer-links a { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--gold); }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 1000px) {
+    .main-content { grid-template-columns: 1fr; gap: 3rem; }
+    .booking-card { position: static; }
+    .location-inner { grid-template-columns: 1fr; gap: 3rem; }
+  }
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .hero-gallery { grid-template-columns: 1fr; height: 50vh; }
+    .hero-side { display: none; }
+    .hero-main { grid-row: 1; grid-column: 1; }
+    .main-content { padding: 3rem 1.5rem; }
+    .gallery-section, .location-section { padding: 3rem 1.5rem; }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    .gallery-item.wide { grid-column: span 1; aspect-ratio: 1; }
+    .amenities-grid, .rooms-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 1.5rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="logo.png" alt="Villa Tiglad" onerror="this.style.display='none'">
+    <span class="nav-brand">Villa Tiglad</span>
+  </a>
+  <a href="index.html#logements" class="nav-back">Retour aux logements</a>
+</nav>
+
+<!-- HERO GALERIE -->
+<div class="hero-gallery">
+  <div class="hero-main" onclick="openLightbox(0)">
+    <img src="photo-bas/95064372.jpg" alt="L'Appartement — Vue principale">
+    <div class="hero-overlay"></div>
+    <div class="hero-badge">
+      <span class="badge-tag">Appartement T2 · 2 personnes</span>
+      <span class="badge-title">L'Appartement</span>
+    </div>
+  </div>
+  <div class="hero-side" onclick="openLightbox(1)">
+    <img src="photo-bas/IMG_002.jpg" alt="L'Appartement" onerror="this.src='photo-bas/95064372.jpg'">
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-side" onclick="openLightbox(2)" style="position:relative;">
+    <img src="photo-bas/IMG_003.jpg" alt="L'Appartement" onerror="this.src='photo-bas/95064372.jpg'">
+    <div class="hero-overlay"></div>
+    <button class="see-all-btn" onclick="event.stopPropagation(); document.getElementById('galerie').scrollIntoView({behavior:'smooth'})">
+      Voir toutes les photos
+    </button>
+  </div>
+</div>
+
+<!-- CONTENU PRINCIPAL -->
+<div class="main-content">
+
+  <!-- COLONNE GAUCHE -->
+  <div>
+    <span class="listing-tag">Villa Tiglad · Concarneau, Bretagne</span>
+    <h1 class="listing-title">L'Appartement<br><em>Séjour en amoureux</em></h1>
+
+    <div class="listing-meta">
+      <div class="meta-item"><span>👥</span><span class="meta-text"><strong>2 personnes</strong> max.</span></div>
+      <div class="meta-item"><span>🛏</span><span class="meta-text"><strong>1 chambre</strong></span></div>
+      <div class="meta-item"><span>🚿</span><span class="meta-text"><strong>1 salle de bain</strong></span></div>
+      <div class="meta-item"><span>🌊</span><span class="meta-text"><strong>Vue océan</strong> panoramique</span></div>
+      <div class="meta-item"><span>🌿</span><span class="meta-text"><strong>Terrasse privée</strong></span></div>
+      <div class="meta-item"><span>🚗</span><span class="meta-text"><strong>Parking clos</strong></span></div>
+    </div>
+
+    <div class="rating-bar">
+      <span class="rating-score">10/10</span>
+      <div class="rating-label">
+        <strong>Coup de cœur · Avis voyageurs</strong>
+        Parmi les 10 % les mieux notés dans la région Concarneau
+      </div>
+    </div>
+
+    <div class="description-section">
+      <h2>Un <em>cocon</em> face à l'océan</h2>
+      <p>L'appartement T2 occupe le <strong>rez-de-chaussée de la Villa Tiglad</strong>, avec sa propre terrasse privative et une vue panoramique sur l'océan et la baie de Concarneau. Idéal pour un séjour en amoureux ou pour un voyageur solo souhaitant profiter du calme breton.</p>
+      <p>Exposé plein ouest, vous assisterez chaque soir à des <strong>couchers de soleil exceptionnels</strong> sur la mer d'Iroise, depuis votre terrasse privée. Accès direct et privatif au sentier côtier GR34.</p>
+      <p>L'appartement dispose de son propre <strong>espace entièrement privé</strong> — terrasse, parking clos, entrée indépendante — pour un séjour en toute intimité.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="description-section">
+      <h2>Les <em>espaces</em></h2>
+      <div class="rooms-grid">
+        <div class="room-card">
+          <span class="room-icon">🛋</span>
+          <div class="room-name">Séjour / Cuisine</div>
+          <div class="room-detail">Pièce à vivre lumineuse avec vue sur mer. Cuisine équipée, TV, Wi-Fi gratuit.</div>
+        </div>
+        <div class="room-card">
+          <span class="room-icon">🛏</span>
+          <div class="room-name">Chambre</div>
+          <div class="room-detail">Lit double confortable, vue mer. Ambiance cosy et reposante.</div>
+        </div>
+        <div class="room-card">
+          <span class="room-icon">🌿</span>
+          <div class="room-name">Terrasse privée</div>
+          <div class="room-detail">Vue panoramique sur l'océan et la baie de Concarneau. Salon extérieur privatif.</div>
+        </div>
+        <div class="room-card">
+          <span class="room-icon">🚗</span>
+          <div class="room-name">Parking clos</div>
+          <div class="room-detail">Place de parking sécurisée. Portail motorisé avec télécommande et digicode.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="description-section">
+      <h2>Les <em>équipements</em></h2>
+      <div class="amenities-grid">
+        <div class="amenity-item">Wi-Fi gratuit</div>
+        <div class="amenity-item">TV</div>
+        <div class="amenity-item">Cuisine équipée</div>
+        <div class="amenity-item">Terrasse privative</div>
+        <div class="amenity-item">Vue océan panoramique</div>
+        <div class="amenity-item">Parking clos sécurisé</div>
+        <div class="amenity-item">Accès direct GR34</div>
+        <div class="amenity-item">Portail motorisé + digicode</div>
+        <div class="amenity-item">Entrée indépendante</div>
+        <div class="amenity-item">Salle de bain privée</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COLONNE DROITE : BOOKING CARD -->
+  <aside>
+    <div class="booking-card">
+      <span class="booking-card-tag">Réserver ce logement</span>
+      <div class="booking-card-title">L'Appartement<br>2 personnes · 1 chambre</div>
+      <div class="booking-capacity">T2 · Vue mer · Terrasse privée · GR34</div>
+
+      <div class="booking-platforms">
+        <a href="https://www.abritel.fr/location-vacances/p1320934" target="_blank" class="btn-platform btn-platform-primary">
+          Réserver sur Abritel
+        </a>
+        <a href="https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p1320934a" target="_blank" class="btn-platform btn-platform-outline">
+          FeWo-direkt
+        </a>
+        <a href="https://www.homeaway.co.uk/p1320934a" target="_blank" class="btn-platform btn-platform-outline">
+          HomeAway UK
+        </a>
+      </div>
+
+      <div class="booking-divider">ou contactez-nous directement</div>
+
+      <div class="contact-direct">
+        <a href="tel:+33633404180" class="contact-line">
+          <span class="contact-line-label">📞 Français</span>
+          <span class="contact-line-value">06 33 40 41 80</span>
+        </a>
+        <a href="tel:+33622824177" class="contact-line">
+          <span class="contact-line-label">📞 English</span>
+          <span class="contact-line-value">06 22 82 41 77</span>
+        </a>
+        <a href="mailto:concarneau@tiglad.fr" class="contact-line">
+          <span class="contact-line-label">✉ Email</span>
+          <span class="contact-line-value">concarneau@tiglad.fr</span>
+        </a>
+      </div>
+
+      <div class="note">
+        Réservation directe possible par téléphone ou email. Nous répondons sous 24h.
+      </div>
+    </div>
+  </aside>
+
+</div>
+
+<!-- GALERIE COMPLÈTE -->
+<section class="gallery-section" id="galerie">
+  <div class="gallery-section-inner">
+    <div class="gallery-header">
+      <span class="listing-tag">Galerie photos</span>
+      <h2 style="font-family:var(--serif); font-size:clamp(1.8rem,3vw,2.8rem); font-weight:300; color:var(--white);">
+        L'Appartement en <em style="font-style:italic; color:var(--gold-light);">images</em>
+      </h2>
+    </div>
+    <div class="gallery-grid" id="gallery-grid"></div>
+  </div>
+</section>
+
+<!-- LOCALISATION -->
+<section class="location-section">
+  <div class="location-inner">
+    <div>
+      <span class="listing-tag">Localisation</span>
+      <h2 style="font-family:var(--serif); font-size:clamp(1.8rem,3vw,2.8rem); font-weight:300; color:var(--white); margin-bottom:1rem;">
+        <em style="font-style:italic; color:var(--gold-light);">Concarneau</em>,<br>Bretagne Sud
+      </h2>
+      <div class="divider"></div>
+      <ul class="location-list">
+        <li><span class="distance">10'</span><span>Ville close de Concarneau — chemin des douaniers + petit bac</span></li>
+        <li><span class="distance">10'</span><span>Piscine municipale · Plage de sable · Commerces</span></li>
+        <li><span class="distance">30'</span><span>Pont-Aven · Quimper · Bénodet</span></li>
+        <li><span class="distance">45'</span><span>Archipel des Glénan · Pointe du Raz · Locronan</span></li>
+        <li><span class="distance">↑</span><span>Accès direct et privatif au sentier côtier GR34</span></li>
+      </ul>
+    </div>
+    <div>
+      <iframe
+        class="map-embed"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2705.9!2d-3.927!3d47.868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4810cd8cd7a2e815%3A0x2e5b2a5d7ef7e!2sConcarneau%2C%2029900%2C%20France!5e0!3m2!1sfr!2sfr!4v1700000000"
+        width="100%" height="100%" style="border:none;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-brand">Villa Tiglad · Concarneau</span>
+  <div class="footer-links">
+    <a href="index.html">Accueil</a>
+    <a href="maison.html">La Maison</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">✕ Fermer</button>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="">
+  <div class="lightbox-nav">
+    <button class="lightbox-btn" onclick="prevPhoto()">←</button>
+    <span class="lightbox-counter" id="lightbox-counter">1 / 55</span>
+    <button class="lightbox-btn" onclick="nextPhoto()">→</button>
+  </div>
+</div>
+
+<script>
+const PHOTO_DIR = 'photo-bas/';
+const HERO_PHOTO = '95064372.jpg';
+
+// Photos connues — complète avec tes vrais noms de fichiers
+const knownPhotos = [
+  '95064372.jpg',
+];
+
+let loadedPhotos = [...knownPhotos];
+let currentIndex = 0;
+
+// Chargement automatique de toutes les photos du dossier
+// via une tentative de chargement séquentielle
+// Le navigateur chargera ce qui existe et ignorera les erreurs
+function buildGallery(photos) {
+  const grid = document.getElementById('gallery-grid');
+  grid.innerHTML = '';
+  photos.forEach((photo, i) => {
+    const item = document.createElement('div');
+    item.className = i === 0 || i === 6 || i === 14 ? 'gallery-item wide' : 'gallery-item';
+    const img = document.createElement('img');
+    img.src = PHOTO_DIR + photo;
+    img.alt = "L'Appartement — photo " + (i + 1);
+    img.loading = 'lazy';
+    img.onerror = function() { this.parentElement.style.display = 'none'; };
+    item.appendChild(img);
+    item.onclick = () => openLightbox(i);
+    grid.appendChild(item);
+  });
+}
+
+buildGallery(loadedPhotos);
+
+function openLightbox(index) {
+  currentIndex = index;
+  document.getElementById('lightbox-img').src = PHOTO_DIR + loadedPhotos[index];
+  document.getElementById('lightbox-counter').textContent = (index + 1) + ' / ' + loadedPhotos.length;
+  document.getElementById('lightbox').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+  document.body.style.overflow = '';
+}
+function nextPhoto() {
+  currentIndex = (currentIndex + 1) % loadedPhotos.length;
+  document.getElementById('lightbox-img').src = PHOTO_DIR + loadedPhotos[currentIndex];
+  document.getElementById('lightbox-counter').textContent = (currentIndex + 1) + ' / ' + loadedPhotos.length;
+}
+function prevPhoto() {
+  currentIndex = (currentIndex - 1 + loadedPhotos.length) % loadedPhotos.length;
+  document.getElementById('lightbox-img').src = PHOTO_DIR + loadedPhotos[currentIndex];
+  document.getElementById('lightbox-counter').textContent = (currentIndex + 1) + ' / ' + loadedPhotos.length;
+}
+document.addEventListener('keydown', e => {
+  if (!document.getElementById('lightbox').classList.contains('active')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowRight') nextPhoto();
+  if (e.key === 'ArrowLeft') prevPhoto();
+});
+document.getElementById('lightbox').addEventListener('click', function(e) {
+  if (e.target === this) closeLightbox();
+});
+</script>
+</body>
+</html>
