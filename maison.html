@@ -409,7 +409,7 @@
 <!-- HERO GALERIE -->
 <div class="hero-gallery">
   <div class="hero-main" onclick="openLightbox(0)">
-    <img src="photo-haut/9e081639.jpg" alt="La Maison — Vue principale" id="hero-main-img">
+    <img src="photo-haut/1.jpg" alt="La Maison — Vue principale" id="hero-main-img">
     <div class="hero-overlay"></div>
     <div class="hero-badge">
       <span class="badge-tag">Maison principale · 5 personnes</span>
@@ -417,11 +417,11 @@
     </div>
   </div>
   <div class="hero-side" onclick="openLightbox(1)">
-    <img src="photo-haut/IMG_002.jpg" alt="La Maison" id="hero-side-1" onerror="this.src='photo-haut/9e081639.jpg'">
+    <img src="photo-haut/2.1.jpg" alt="La Maison" id="hero-side-1" onerror="this.src='photo-haut/2.1.jpg'">
     <div class="hero-overlay"></div>
   </div>
   <div class="hero-side" onclick="openLightbox(2)" style="position:relative;">
-    <img src="photo-haut/IMG_003.jpg" alt="La Maison" id="hero-side-2" onerror="this.src='photo-haut/9e081639.jpg'">
+    <img src="photo-haut/3.1.jpg" alt="La Maison" id="hero-side-2" onerror="this.src='photo-haut/3.1.jpg'">
     <div class="hero-overlay"></div>
     <button class="see-all-btn" onclick="event.stopPropagation(); document.getElementById('galerie').scrollIntoView({behavior:'smooth'})">
       Voir toutes les photos
@@ -630,59 +630,49 @@
 // Le reste sera chargé dynamiquement
 
 const PHOTO_DIR = 'photo-haut/';
-const HERO_PHOTO = '9e081639.jpg';
+const HERO_PHOTO = '1.jpg';
 
 // Liste des photos — on met la photo principale en premier,
 // puis on tentera de charger les autres séquentiellement
 // Adapte cette liste selon tes vrais noms de fichiers
 const knownPhotos = [
-  '03e35471.jpg',
-  '04758621.jpg',
-  '075232d8.jpg',
-  '0ba464cb.jpg',
+  '1.jpg',
   '10ef6595.jpg',
-  '1cf7ac4f.jpg',
-  '2009dabd.jpg',
-  '26663068.jpg',
-  '29b603a8.jpg',
-  '2a3e28e4.jpg',
-  '33bc76ff.jpg',
-  '38739df3.jpg',
-  '38f86ad3.jpg',
-  '3900980c.jpg',
-  '50963816.jpg',
+  '2.1.jpg',
+  '3.1.jpg',
   '51268635.jpg',
   '53834dc0.jpg',
   '56973720.jpg',
   '5b378825.jpg',
   '62570fa2.jpg',
-  '6f040704.jpg',
-  '70016c23.jpg',
   '8032e4ff.jpg',
-  '80b4570d.jpg',
   '883976ba.jpg',
   '92f536ae.jpg',
-  '9475e128.jpg',
   '950da9af.jpg',
-  '95119b64.jpg',
-  '9e081639.jpg',
-  'a3ff2154.jpg',
   'a52aab80.jpg',
   'a91adda7.jpg',
-  'ad74e40b.jpg',
-  'b55403a0.jpg',
   'b902664b.jpg',
   'ba4d32ca.jpg',
   'baee8104.jpg',
-  'cf3e5d6c.jpg',
-  'd2084989.jpg',
-  'd24aa37d.jpg',
   'da1cbeb5-064f-43c3-b322-b1f5cafcf724-thumbnail.jpg',
   'da87dc8d.jpg',
   'dc7d95a1.jpg',
-  'e4f07b2d.jpg',
   'fb70e8cf.jpg',
-  'fb8d52ef.jpg'
+  'fb8d52ef.jpg',
+  'IMG_6953.jpg',
+  'IMG_6956.jpg',
+  'IMG_6959.jpg',
+  'IMG_6961.jpg',
+  'IMG_6967.jpg',
+  'IMG_6969.jpg',
+  'IMG_6971.jpg',
+  'IMG_6973.jpg',
+  'IMG_6974.jpg',
+  'IMG_6975.jpg',
+  'IMG_6976.jpg',
+  'IMG_6977.jpg',
+  'z0ba464cb.jpg',
+  'z2009dabd.jpg'
 ];
 
 // Génération d'une liste élargie à tester

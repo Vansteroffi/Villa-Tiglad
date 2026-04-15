@@ -194,7 +194,7 @@
 <!-- HERO GALERIE -->
 <div class="hero-gallery">
   <div class="hero-main" onclick="openLightbox(0)">
-    <img src="photo-bas/95064372.jpg" alt="L'Appartement — Vue principale">
+    <img src="photo-bas/1.jpg" alt="L'Appartement — Vue principale">
     <div class="hero-overlay"></div>
     <div class="hero-badge">
       <span class="badge-tag">Appartement T2 · 2 personnes</span>
@@ -202,11 +202,11 @@
     </div>
   </div>
   <div class="hero-side" onclick="openLightbox(1)">
-    <img src="photo-bas/d420e120.jpg" alt="L'Appartement" onerror="this.src='photo-bas/d420e120.jpg'">
+    <img src="photo-bas/2.jpg" alt="L'Appartement" onerror="this.src='photo-bas/2.jpg'">
     <div class="hero-overlay"></div>
   </div>
   <div class="hero-side" onclick="openLightbox(2)" style="position:relative;">
-    <img src="photo-bas/fc78181a.jpg" alt="L'Appartement" onerror="this.src='photo-bas/fc78181a.jpg'">
+    <img src="photo-bas/3.jpg" alt="L'Appartement" onerror="this.src='photo-bas/3.jpg'">
     <div class="hero-overlay"></div>
     <button class="see-all-btn" onclick="event.stopPropagation(); document.getElementById('galerie').scrollIntoView({behavior:'smooth'})">
       Voir toutes les photos
@@ -394,48 +394,40 @@
 
 <script>
 const PHOTO_DIR = 'photo-bas/';
-const HERO_PHOTO = '95064372.jpg';
+const HERO_PHOTO = '1.jpg';
 
 // Photos connues — complète avec tes vrais noms de fichiers
 const knownPhotos = [
-  '094b0e3d.jpg',
-  '0b253c6f.jpg',
-  '0b42b003.jpg',
-  '0d10dbec.jpg',
-  '0df87f93.jpg',
-  '118589e2.jpg',
+  '1.jpg',
   '16da7e6e.jpg',
-  '18472530.jpg',
-  '2c88fd9c.jpg',
-  '372323dc.jpg',
-  '382ec98c.jpg',
-  '4bf80735.jpg',
-  '4f567bae.jpg',
-  '4f752332.jpg',
-  '505d29e4.jpg',
-  '512d2b18.jpg',
-  '6359f08d.jpg',
-  '7098e5ca.jpg',
-  '7e5a217e.jpg',
+  '2.jpg',
+  '3.jpg',
+  '6.jpg',
   '82eac17d.jpg',
-  '87027bcb.jpg',
-  '95064372.jpg',
   '95f741ab.jpg',
-  '9c475f5f.jpg',
-  'a14b9215.jpg',
-  'be6c2256.jpg',
-  'c0233223.jpg',
-  'c33d6020.jpg',
-  'ce2b65ea.jpg',
-  'd3c87951.jpg',
-  'd420e120.jpg',
-  'daf55fbb.jpg',
-  'e319f74e.jpg',
-  'e8289f0c.jpg',
-  'e8b5a88c.jpg',
-  'f0fa46ab.jpg',
-  'f96c6615.jpg',
-  'fc78181a.jpg'
+  'IMG_6979.jpg',
+  'IMG_6980.jpg',
+  'IMG_6981.jpg',
+  'IMG_6982.jpg',
+  'IMG_6983.jpg',
+  'IMG_6984.jpg',
+  'IMG_6986.jpg',
+  'IMG_6987.jpg',
+  'IMG_6988.jpg',
+  'IMG_6990.jpg',
+  'IMG_6991.jpg',
+  'IMG_6992.jpg',
+  'IMG_6993.jpg',
+  'IMG_6995.jpg',
+  'IMG_6996.jpg',
+  'IMG_6997.jpg',
+  'IMG_6998.jpg',
+  'z2c88fd9c.jpg',
+  'z4bf80735.jpg',
+  'z505d29e4.jpg',
+  'z87027bcb.jpg',
+  'z9c475f5f.jpg',
+  'zc33d6020.jpg'
 ];
 
 let loadedPhotos = [...knownPhotos];
