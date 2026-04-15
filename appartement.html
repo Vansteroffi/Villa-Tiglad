@@ -90,6 +90,10 @@
   .description-section p strong { color: var(--sand); font-weight: 400; }
   .divider { width: 40px; height: 1px; background: var(--gold); opacity: 0.5; margin: 2rem 0; }
 
+  /* Style vidéo spécifique */
+  .video-container { margin: 2rem 0; width: 100%; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; background: #000; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+  .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; pointer-events: none; }
+
   .amenities-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.8rem; margin-top: 1.5rem; }
   .amenity-item { display: flex; align-items: center; gap: 0.8rem; font-size: 0.83rem; color: var(--text-muted); padding: 0.7rem 0; border-bottom: 1px solid rgba(201,169,110,0.08); }
   .amenity-item::before { content: ''; width: 5px; height: 5px; border: 1px solid var(--gold); border-radius: 50%; flex-shrink: 0; }
@@ -182,7 +186,6 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a href="index.html" class="nav-logo">
     <img src="logo.png" alt="Villa Tiglad" onerror="this.style.display='none'">
@@ -191,7 +194,6 @@
   <a href="index.html#logements" class="nav-back">Retour aux logements</a>
 </nav>
 
-<!-- HERO GALERIE -->
 <div class="hero-gallery">
   <div class="hero-main" onclick="openLightbox(0)">
     <img src="photo-bas/1.jpg" alt="L'Appartement — Vue principale">
@@ -214,10 +216,8 @@
   </div>
 </div>
 
-<!-- CONTENU PRINCIPAL -->
 <div class="main-content">
 
-  <!-- COLONNE GAUCHE -->
   <div>
     <span class="listing-tag">Villa Tiglad · Concarneau, Bretagne</span>
     <h1 class="listing-title">L'Appartement<br><em>Séjour en amoureux</em></h1>
@@ -242,6 +242,15 @@
     <div class="description-section">
       <h2>Un <em>cocon</em> face à l'océan</h2>
       <p>L'appartement T2 occupe le <strong>rez-de-chaussée de la Villa Tiglad</strong>, avec sa propre terrasse privative et une vue panoramique sur l'océan et la baie de Concarneau. Idéal pour un séjour en amoureux ou pour un voyageur solo souhaitant profiter du calme breton.</p>
+      
+      <div class="video-container">
+          <iframe 
+            src="https://www.youtube.com/embed/aFrjQSMNFsE?autoplay=1&mute=1&loop=1&playlist=aFrjQSMNFsE&controls=0&modestbranding=1&rel=0&showinfo=0" 
+            allow="autoplay; encrypted-media" 
+            allowfullscreen>
+          </iframe>
+      </div>
+
       <p>Exposé plein ouest, vous assisterez chaque soir à des <strong>couchers de soleil exceptionnels</strong> sur la mer d'Iroise, depuis votre terrasse privée. Accès direct et privatif au sentier côtier GR34.</p>
       <p>L'appartement dispose de son propre <strong>espace entièrement privé</strong> — terrasse, parking clos, entrée indépendante — pour un séjour en toute intimité.</p>
     </div>
@@ -252,7 +261,7 @@
       <h2>Les <em>espaces</em></h2>
       <div class="rooms-grid">
         <div class="room-card">
-          <span class="room-icon">🛋</span>
+          <span class="room-icon"> Couchage </span>
           <div class="room-name">Séjour / Cuisine</div>
           <div class="room-detail">Pièce à vivre lumineuse avec vue sur mer. Cuisine équipée, TV, Wi-Fi gratuit.</div>
         </div>
@@ -293,7 +302,6 @@
     </div>
   </div>
 
-  <!-- COLONNE DROITE : BOOKING CARD -->
   <aside>
     <div class="booking-card">
       <span class="booking-card-tag">Réserver ce logement</span>
@@ -337,7 +345,6 @@
 
 </div>
 
-<!-- GALERIE COMPLÈTE -->
 <section class="gallery-section" id="galerie">
   <div class="gallery-section-inner">
     <div class="gallery-header">
@@ -350,7 +357,6 @@
   </div>
 </section>
 
-<!-- LOCALISATION -->
 <section class="location-section">
   <div class="location-inner">
     <div>
@@ -367,11 +373,10 @@
         <li><span class="distance">↑</span><span>Accès direct et privatif au sentier côtier GR34</span></li>
       </ul>
     </div>
-    <div class="embed-map-responsive"><div class="embed-map-container"><iframe class="embed-map-frame" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&height=400&hl=en&q=5%20impasse%20des%20mouettes%20concarenau&t=h&z=14&ie=UTF8&iwloc=B&output=embed"></iframe><a href="https://idolsofash.app" style="font-size:2px!important;color:gray!important;position:absolute;bottom:0;left:0;z-index:1;max-height:1px;overflow:hidden">Idols of Ash</a></div><style>.embed-map-responsive{position:relative;text-align:right;width:100%;height:0;padding-bottom:66.66666666666666%;}.embed-map-container{overflow:hidden;background:none!important;width:100%;height:100%;position:absolute;top:0;left:0;}.embed-map-frame{width:100%!important;height:100%!important;position:absolute;top:0;left:0;}</style></div>
+    <div class="embed-map-responsive"><div class="embed-map-container"><iframe class="embed-map-frame" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Concarneau&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe></div><style>.embed-map-responsive{position:relative;text-align:right;width:100%;height:0;padding-bottom:66.66666666666666%;}.embed-map-container{overflow:hidden;background:none!important;width:100%;height:100%;position:absolute;top:0;left:0;}.embed-map-frame{width:100%!important;height:100%!important;position:absolute;top:0;left:0;}</style></div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <span class="footer-brand">Villa Tiglad · Concarneau</span>
   <div class="footer-links">
@@ -381,7 +386,6 @@
   </div>
 </footer>
 
-<!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox">
   <button class="lightbox-close" onclick="closeLightbox()">✕ Fermer</button>
   <img class="lightbox-img" id="lightbox-img" src="" alt="">
@@ -396,46 +400,18 @@
 const PHOTO_DIR = 'photo-bas/';
 const HERO_PHOTO = '1.jpg';
 
-// Photos connues — complète avec tes vrais noms de fichiers
 const knownPhotos = [
-  '1.jpg',
-  '16da7e6e.jpg',
-  '2.jpg',
-  '3.jpg',
-  '6.jpg',
-  '82eac17d.jpg',
-  '95f741ab.jpg',
-  'IMG_6979.jpg',
-  'IMG_6980.jpg',
-  'IMG_6981.jpg',
-  'IMG_6982.jpg',
-  'IMG_6983.jpg',
-  'IMG_6984.jpg',
-  'IMG_6986.jpg',
-  'IMG_6987.jpg',
-  'IMG_6988.jpg',
-  'IMG_6990.jpg',
-  'IMG_6991.jpg',
-  'IMG_6992.jpg',
-  'IMG_6993.jpg',
-  'IMG_6995.jpg',
-  'IMG_6996.jpg',
-  'IMG_6997.jpg',
-  'IMG_6998.jpg',
-  'z2c88fd9c.jpg',
-  'z4bf80735.jpg',
-  'z505d29e4.jpg',
-  'z87027bcb.jpg',
-  'z9c475f5f.jpg',
-  'zc33d6020.jpg'
+  '1.jpg', '16da7e6e.jpg', '2.jpg', '3.jpg', '6.jpg', '82eac17d.jpg', '95f741ab.jpg',
+  'IMG_6979.jpg', 'IMG_6980.jpg', 'IMG_6981.jpg', 'IMG_6982.jpg', 'IMG_6983.jpg',
+  'IMG_6984.jpg', 'IMG_6986.jpg', 'IMG_6987.jpg', 'IMG_6988.jpg', 'IMG_6990.jpg',
+  'IMG_6991.jpg', 'IMG_6992.jpg', 'IMG_6993.jpg', 'IMG_6995.jpg', 'IMG_6996.jpg',
+  'IMG_6997.jpg', 'IMG_6998.jpg', 'z2c88fd9c.jpg', 'z4bf80735.jpg', 'z505d29e4.jpg',
+  'z87027bcb.jpg', 'z9c475f5f.jpg', 'zc33d6020.jpg'
 ];
 
 let loadedPhotos = [...knownPhotos];
 let currentIndex = 0;
 
-// Chargement automatique de toutes les photos du dossier
-// via une tentative de chargement séquentielle
-// Le navigateur chargera ce qui existe et ignorera les erreurs
 function buildGallery(photos) {
   const grid = document.getElementById('gallery-grid');
   grid.innerHTML = '';
