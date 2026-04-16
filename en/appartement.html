@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>L'Appartement — Villa Tiglad · Concarneau</title>
-<meta name="description" content="Découvrez la Villa Tiglad à Concarneau : une ancienne maison de gardien de phare métamorphosée en un havre de paix luxueux. Vue mer panoramique, accès direct au GR34 et prestations d'exception pour un séjour inoubliable en Bretagne.">
-<link rel="icon" type="image/png" href="favicon.png">
+<title>The Apartment — Villa Tiglad · Concarneau</title>
+<meta name="description" content="Discover Villa Tiglad in Concarneau: a former lighthouse keeper's cottage transformed into a luxurious haven of peace. Panoramic sea views, direct access to the GR34, and exceptional amenities for an unforgettable stay in Brittany.">
+<link rel="icon" type="image/png" href="../favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="alternate" hreflang="fr" href="appartement.html" />
-<link rel="alternate" hreflang="en" href="en/appartement.html" />
-<link rel="alternate" hreflang="de" href="de/appartement.html" />
-<link rel="alternate" hreflang="x-default" href="appartement.html" />
+<link rel="alternate" hreflang="fr" href="../appartement.html" />
+<link rel="alternate" hreflang="en" href="appartement.html" />
+<link rel="alternate" hreflang="de" href="../de/appartement.html" />
+<link rel="alternate" hreflang="x-default" href="../appartement.html" />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -134,10 +134,8 @@
   .btn-platform-primary:hover { background: var(--gold-light); }
   .btn-platform-outline { background: transparent; color: var(--sand); border: 1px solid rgba(232,223,200,0.3); }
   .btn-platform-outline:hover { border-color: var(--sand); background: rgba(232,223,200,0.05); }
-  .booking-divider { text-align: center; font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin: 1.2rem 0; position: relative; }
-  .booking-divider::before, .booking-divider::after { content: ''; position: absolute; top: 50%; width: 35%; height: 1px; background: rgba(201,169,110,0.2); }
-  .booking-divider::before { left: 0; }
-  .booking-divider::after { right: 0; }
+  .booking-divider { text-align: center; font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin: 2rem 0 1.2rem 0; border-top: 1px solid rgba(201,169,110,0.2); padding-top: 1.2rem; position: relative; }
+  .booking-divider::before, .booking-divider::after { display: none; }
   .contact-direct { display: flex; flex-direction: column; gap: 0.6rem; }
   .contact-line { display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 1rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(201,169,110,0.1); text-decoration: none; transition: background 0.2s, border-color 0.2s; }
   .contact-line:hover { background: rgba(201,169,110,0.07); border-color: rgba(201,169,110,0.3); }
@@ -206,39 +204,39 @@
 
 <nav>
   <a href="index.html" class="nav-logo">
-    <img src="logo.png" alt="Villa Tiglad" onerror="this.style.display='none'">
+    <img src="../logo.png" alt="Villa Tiglad" onerror="this.style.display='none'">
     <span class="nav-brand">Villa Tiglad</span>
   </a>
   <div style="display:flex; align-items:center;">
-    <a href="index.html#logements" class="nav-back">Retour aux logements</a>
+    <a href="index.html#properties" class="nav-back">Back to properties</a>
     <div class="lang-switcher">
-      <a href="appartement.html" class="active">FR</a>
+      <a href="../appartement.html">FR</a>
       <span class="lang-sep">|</span>
-      <a href="en/appartement.html">EN</a>
+      <a href="appartement.html" class="active">EN</a>
       <span class="lang-sep">|</span>
-      <a href="de/appartement.html">DE</a>
+      <a href="../de/appartement.html">DE</a>
     </div>
   </div>
 </nav>
 
 <div class="hero-gallery">
   <div class="hero-main" onclick="openLightbox(0)">
-    <img src="photo-bas/1.jpg" alt="L'Appartement — Vue principale">
+    <img src="../photo-bas/1.jpg" alt="The Apartment — Main View">
     <div class="hero-overlay"></div>
     <div class="hero-badge">
-      <span class="badge-tag">Appartement T2 · 2 personnes</span>
-      <span class="badge-title">L'Appartement</span>
+      <span class="badge-tag">1-Bedroom Apartment · 2 guests</span>
+      <span class="badge-title">The Apartment</span>
     </div>
   </div>
   <div class="hero-side" onclick="openLightbox(1)">
-    <img src="photo-bas/2.jpg" alt="L'Appartement" onerror="this.src='photo-bas/2.jpg'">
+    <img src="../photo-bas/2.jpg" alt="The Apartment" onerror="this.src='../photo-bas/2.jpg'">
     <div class="hero-overlay"></div>
   </div>
   <div class="hero-side" onclick="openLightbox(2)" style="position:relative;">
-    <img src="photo-bas/3.jpg" alt="L'Appartement" onerror="this.src='photo-bas/3.jpg'">
+    <img src="../photo-bas/3.jpg" alt="The Apartment" onerror="this.src='../photo-bas/3.jpg'">
     <div class="hero-overlay"></div>
-    <button class="see-all-btn" onclick="event.stopPropagation(); document.getElementById('galerie').scrollIntoView({behavior:'smooth'})">
-      Voir toutes les photos
+    <button class="see-all-btn" onclick="event.stopPropagation(); document.getElementById('gallery').scrollIntoView({behavior:'smooth'})">
+      See all photos
     </button>
   </div>
 </div>
@@ -246,29 +244,29 @@
 <div class="main-content">
 
   <div>
-    <span class="listing-tag">Villa Tiglad · Concarneau, Bretagne</span>
-    <h1 class="listing-title">L'Appartement<br><em>Séjour en amoureux</em></h1>
+    <span class="listing-tag">Villa Tiglad · Concarneau, Brittany</span>
+    <h1 class="listing-title">The Apartment<br><em>Romantic Getaway</em></h1>
 
     <div class="listing-meta">
-      <div class="meta-item"><span>👥</span><span class="meta-text"><strong>2 personnes</strong> max.</span></div>
-      <div class="meta-item"><span>🛏</span><span class="meta-text"><strong>1 chambre</strong></span></div>
-      <div class="meta-item"><span>🚿</span><span class="meta-text"><strong>1 salle de bain</strong></span></div>
-      <div class="meta-item"><span>🌊</span><span class="meta-text"><strong>Vue océan</strong> panoramique</span></div>
-      <div class="meta-item"><span>🌿</span><span class="meta-text"><strong>Terrasse privée</strong></span></div>
-      <div class="meta-item"><span>🚗</span><span class="meta-text"><strong>Parking clos</strong></span></div>
+      <div class="meta-item"><span>👥</span><span class="meta-text"><strong>2 guests</strong> max.</span></div>
+      <div class="meta-item"><span>🛏</span><span class="meta-text"><strong>1 bedroom</strong></span></div>
+      <div class="meta-item"><span>🚿</span><span class="meta-text"><strong>1 bathroom</strong></span></div>
+      <div class="meta-item"><span>🌊</span><span class="meta-text"><strong>Panoramic</strong> ocean view</span></div>
+      <div class="meta-item"><span>🌿</span><span class="meta-text"><strong>Private terrace</strong></span></div>
+      <div class="meta-item"><span>🚗</span><span class="meta-text"><strong>Enclosed parking</strong></span></div>
     </div>
 
     <div class="rating-bar">
       <span class="rating-score">10/10</span>
       <div class="rating-label">
-        <strong>Coup de cœur · Avis voyageurs</strong>
-        Parmi les 10 % les mieux notés dans la région Concarneau
+        <strong>Guest Favorite · Traveler reviews</strong>
+        Among the top 10% highest-rated homes in the Concarneau area
       </div>
     </div>
 
     <div class="description-section">
-      <h2>Un <em>cocon</em> face à l'océan</h2>
-      <p>L'appartement T2 occupe le <strong>rez-de-chaussée de la Villa Tiglad</strong>, avec sa propre terrasse privative et une vue panoramique sur l'océan et la baie de Concarneau. Idéal pour un séjour en amoureux ou pour un voyageur solo souhaitant profiter du calme breton.</p>
+      <h2>Your <em>cocoon</em> facing the ocean</h2>
+      <p>The 1-bedroom apartment occupies the <strong>ground floor of Villa Tiglad</strong>, with its own private terrace and a breathtaking panoramic view of the ocean and the bay of Concarneau. Perfect for a romantic getaway or a solo traveler seeking the calm of Brittany.</p>
       
       <div class="video-container">
         <iframe 
@@ -279,34 +277,34 @@
         </iframe>
       </div>
 
-      <p>Exposé plein ouest, vous assisterez chaque soir à des <strong>couchers de soleil exceptionnels</strong> sur la mer d'Iroise, depuis votre terrasse privée. Accès direct et privatif au sentier côtier GR34.</p>
-      <p>L'appartement dispose de son propre <strong>espace entièrement privé</strong> — terrasse, parking clos, entrée indépendante — pour un séjour en toute intimité.</p>
+      <p>Facing due west, you will witness <strong>spectacular sunsets</strong> over the Iroise Sea every evening from your private terrace. Access the GR34 coastal path directly through your private gate.</p>
+      <p>The apartment has its own <strong>entirely private space</strong> — terrace, enclosed parking, independent entrance — ensuring an intimate and peaceful stay.</p>
     </div>
 
     <div class="divider"></div>
 
     <div class="description-section">
-      <h2>Les <em>espaces</em></h2>
+      <h2>The <em>Spaces</em></h2>
       <div class="rooms-grid">
         <div class="room-card">
-          <span class="room-icon"> Couchage </span>
-          <div class="room-name">Séjour / Cuisine</div>
-          <div class="room-detail">Pièce à vivre lumineuse avec vue sur mer. Cuisine équipée, TV, Wi-Fi gratuit.</div>
+          <span class="room-icon">🛋</span>
+          <div class="room-name">Living Room / Kitchen</div>
+          <div class="room-detail">Bright living area with sea views. Fully equipped kitchen, TV, free Wi-Fi.</div>
         </div>
         <div class="room-card">
           <span class="room-icon">🛏</span>
-          <div class="room-name">Chambre</div>
-          <div class="room-detail">Lit double confortable, vue mer. Ambiance cosy et reposante.</div>
+          <div class="room-name">Bedroom</div>
+          <div class="room-detail">Comfortable double bed with a view of the sea. Cozy and relaxing ambiance.</div>
         </div>
         <div class="room-card">
           <span class="room-icon">🌿</span>
-          <div class="room-name">Terrasse privée</div>
-          <div class="room-detail">Vue panoramique sur l'océan et la baie de Concarneau. Salon extérieur privatif.</div>
+          <div class="room-name">Private Terrace</div>
+          <div class="room-detail">Panoramic views of the ocean and Concarneau bay. Private outdoor lounge.</div>
         </div>
         <div class="room-card">
           <span class="room-icon">🚗</span>
-          <div class="room-name">Parking clos</div>
-          <div class="room-detail">Place de parking sécurisée. Portail motorisé avec télécommande et digicode.</div>
+          <div class="room-name">Enclosed Parking</div>
+          <div class="room-detail">Secure parking space. Motorized gate with remote control and keypad.</div>
         </div>
       </div>
     </div>
@@ -314,50 +312,50 @@
     <div class="divider"></div>
 
     <div class="description-section">
-      <h2>Les <em>équipements</em></h2>
+      <h2>The <em>Amenities</em></h2>
       <div class="amenities-grid">
-        <div class="amenity-item">Wi-Fi gratuit</div>
+        <div class="amenity-item">Free Wi-Fi</div>
         <div class="amenity-item">TV</div>
-        <div class="amenity-item">Cuisine équipée</div>
-        <div class="amenity-item">Terrasse privative</div>
-        <div class="amenity-item">Vue océan panoramique</div>
-        <div class="amenity-item">Parking clos sécurisé</div>
-        <div class="amenity-item">Accès direct GR34</div>
-        <div class="amenity-item">Portail motorisé + digicode</div>
-        <div class="amenity-item">Entrée indépendante</div>
-        <div class="amenity-item">Salle de bain privée</div>
+        <div class="amenity-item">Fully equipped kitchen</div>
+        <div class="amenity-item">Private terrace</div>
+        <div class="amenity-item">Panoramic ocean view</div>
+        <div class="amenity-item">Secure enclosed parking</div>
+        <div class="amenity-item">Direct GR34 access</div>
+        <div class="amenity-item">Motorized gate + keypad</div>
+        <div class="amenity-item">Independent entrance</div>
+        <div class="amenity-item">Private bathroom</div>
       </div>
     </div>
   </div>
 
   <aside>
     <div class="booking-card">
-      <span class="booking-card-tag">Réserver ce logement</span>
-      <div class="booking-card-title">L'Appartement<br>2 personnes · 1 chambre</div>
-      <div class="booking-capacity">T2 · Vue mer · Terrasse privée · GR34</div>
+      <span class="booking-card-tag">Book this property</span>
+      <div class="booking-card-title">The Apartment<br>2 guests · 1 bedroom</div>
+      <div class="booking-capacity">1-Bedroom · Sea view · Private terrace</div>
 
       <div class="booking-platforms">
-        <a href="https://www.abritel.fr/location-vacances/p1320934" target="_blank" class="btn-platform btn-platform-primary">
-          FR - Réserver sur Abritel
+        <a href="https://www.homeaway.co.uk/p1320934a" target="_blank" class="btn-platform btn-platform-primary">
+          UK - Book on HomeAway
+        </a>
+        <a href="https://www.abritel.fr/location-vacances/p1320934" target="_blank" class="btn-platform btn-platform-outline">
+          FR - Book on Abritel
         </a>
         <a href="https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p1320934a" target="_blank" class="btn-platform btn-platform-outline">
           DE - FeWo-direkt
         </a>
-        <a href="https://www.homeaway.co.uk/p1320934a" target="_blank" class="btn-platform btn-platform-outline">
-          UK - HomeAway
-        </a>
       </div>
 
-      <div class="booking-divider">ou contactez-nous directement</div>
+      <div class="booking-divider">or contact us directly</div>
 
       <div class="contact-direct">
-        <a href="tel:+33633404180" class="contact-line">
-          <span class="contact-line-label">📞 Français</span>
-          <span class="contact-line-value">06 33 40 41 80</span>
-        </a>
         <a href="tel:+33622824177" class="contact-line">
           <span class="contact-line-label">📞 English</span>
-          <span class="contact-line-value">06 22 82 41 77</span>
+          <span class="contact-line-value">+33 6 22 82 41 77</span>
+        </a>
+        <a href="tel:+33633404180" class="contact-line">
+          <span class="contact-line-label">📞 French</span>
+          <span class="contact-line-value">+33 6 33 40 41 80</span>
         </a>
         <a href="mailto:concarneau@tiglad.fr" class="contact-line">
           <span class="contact-line-label">✉ Email</span>
@@ -366,19 +364,19 @@
       </div>
 
       <div class="note">
-        Réservation directe possible par téléphone ou email. Nous répondons sous 24h.
+        Direct booking is possible by phone or email. We will reply within 24 hours.
       </div>
     </div>
   </aside>
 
 </div>
 
-<section class="gallery-section" id="galerie">
+<section class="gallery-section" id="gallery">
   <div class="gallery-section-inner">
     <div class="gallery-header">
-      <span class="listing-tag">Galerie photos</span>
+      <span class="listing-tag">Photo Gallery</span>
       <h2 style="font-family:var(--serif); font-size:clamp(1.8rem,3vw,2.8rem); font-weight:300; color:var(--white);">
-        L'Appartement en <em style="font-style:italic; color:var(--gold-light);">images</em>
+        The Apartment in <em style="font-style:italic; color:var(--gold-light);">pictures</em>
       </h2>
     </div>
     <div class="gallery-grid" id="gallery-grid"></div>
@@ -388,17 +386,17 @@
 <section class="location-section">
   <div class="location-inner">
     <div>
-      <span class="listing-tag">Localisation</span>
+      <span class="listing-tag">Location</span>
       <h2 style="font-family:var(--serif); font-size:clamp(1.8rem,3vw,2.8rem); font-weight:300; color:var(--white); margin-bottom:1rem;">
-        <em style="font-style:italic; color:var(--gold-light);">Concarneau</em>,<br>Bretagne Sud
+        <em style="font-style:italic; color:var(--gold-light);">Concarneau</em>,<br>South Brittany
       </h2>
       <div class="divider"></div>
       <ul class="location-list">
-        <li><span class="distance">10'</span><span>Ville close de Concarneau — chemin des douaniers + petit bac</span></li>
-        <li><span class="distance">10'</span><span>Piscine municipale · Plage de sable · Commerces</span></li>
+        <li><span class="distance">10'</span><span>To the Walled City — via the coastal path + small ferry</span></li>
+        <li><span class="distance">10'</span><span>Municipal pool · Sandy beach · Basic shops</span></li>
         <li><span class="distance">30'</span><span>Pont-Aven · Quimper · Bénodet</span></li>
-        <li><span class="distance">45'</span><span>Archipel des Glénan · Pointe du Raz · Locronan</span></li>
-        <li><span class="distance">↑</span><span>Accès direct et privatif au sentier côtier GR34</span></li>
+        <li><span class="distance">45'</span><span>Glénan Archipelago · Pointe du Raz · Locronan</span></li>
+        <li><span class="distance">↑</span><span>Direct and private access to the GR34 coastal path</span></li>
       </ul>
     </div>
     <div class="embed-map-responsive"><div class="embed-map-container"><iframe class="embed-map-frame" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Concarneau&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe></div><style>.embed-map-responsive{position:relative;text-align:right;width:100%;height:0;padding-bottom:66.66666666666666%;}.embed-map-container{overflow:hidden;background:none!important;width:100%;height:100%;position:absolute;top:0;left:0;}.embed-map-frame{width:100%!important;height:100%!important;position:absolute;top:0;left:0;}</style></div>
@@ -408,14 +406,14 @@
 <footer>
   <span class="footer-brand">Villa Tiglad · Concarneau</span>
   <div class="footer-links">
-    <a href="index.html">Accueil</a>
-    <a href="maison.html">La Maison</a>
+    <a href="index.html">Home</a>
+    <a href="maison.html">The House</a>
     <a href="index.html#contact">Contact</a>
   </div>
 </footer>
 
 <div class="lightbox" id="lightbox">
-  <button class="lightbox-close" onclick="closeLightbox()">✕ Fermer</button>
+  <button class="lightbox-close" onclick="closeLightbox()">✕ Close</button>
   <img class="lightbox-img" id="lightbox-img" src="" alt="">
   <div class="lightbox-nav">
     <button class="lightbox-btn" onclick="prevPhoto()">←</button>
@@ -425,7 +423,7 @@
 </div>
 
 <script>
-const PHOTO_DIR = 'photo-bas/';
+const PHOTO_DIR = '../photo-bas/';
 const HERO_PHOTO = '1.jpg';
 
 const knownPhotos = [
@@ -448,7 +446,7 @@ function buildGallery(photos) {
     item.className = i === 0 || i === 6 || i === 14 ? 'gallery-item wide' : 'gallery-item';
     const img = document.createElement('img');
     img.src = PHOTO_DIR + photo;
-    img.alt = "L'Appartement — photo " + (i + 1);
+    img.alt = "The Apartment — photo " + (i + 1);
     img.loading = 'lazy';
     img.onerror = function() { this.parentElement.style.display = 'none'; };
     item.appendChild(img);

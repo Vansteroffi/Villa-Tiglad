@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>La Maison — Villa Tiglad · Concarneau</title>
-<meta name="description" content="Découvrez la Villa Tiglad à Concarneau : une ancienne maison de gardien de phare métamorphosée en un havre de paix luxueux. Vue mer panoramique, accès direct au GR34 et prestations d'exception pour un séjour inoubliable en Bretagne.">
-<link rel="icon" type="image/png" href="favicon.png">
+<title>Das Haus — Villa Tiglad · Concarneau</title>
+<meta name="description" content="Entdecken Sie die Villa Tiglad in Concarneau: Ein ehemaliges Leuchtturmwärterhaus, das in eine luxuriöse Oase der Ruhe verwandelt wurde. Panoramablick auf das Meer, direkter Zugang zum GR34 und außergewöhnliche Annehmlichkeiten für einen unvergesslichen Aufenthalt in der Bretagne.">
+<link rel="icon" type="image/png" href="../favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="alternate" hreflang="fr" href="maison.html" />
-<link rel="alternate" hreflang="en" href="en/maison.html" />
-<link rel="alternate" hreflang="de" href="de/maison.html" />
-<link rel="alternate" hreflang="x-default" href="maison.html" />
+<link rel="alternate" hreflang="fr" href="../maison.html" />
+<link rel="alternate" hreflang="en" href="../en/maison.html" />
+<link rel="alternate" hreflang="de" href="maison.html" />
+<link rel="alternate" hreflang="x-default" href="../maison.html" />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -291,7 +291,6 @@
     padding-top: 1.2rem;
     position: relative;
   }
-  /* Suppression des anciennes lignes de pseudo-éléments qui coupaient le texte */
   .booking-divider::before, .booking-divider::after { display: none; }
 
   .contact-direct { display: flex; flex-direction: column; gap: 0.6rem; }
@@ -438,39 +437,39 @@
 
 <nav>
   <a href="index.html" class="nav-logo">
-    <img src="logo.png" alt="Villa Tiglad" onerror="this.style.display='none'">
+    <img src="../logo.png" alt="Villa Tiglad" onerror="this.style.display='none'">
     <span class="nav-brand">Villa Tiglad</span>
   </a>
   <div style="display:flex; align-items:center;">
-    <a href="index.html#logements" class="nav-back">Retour aux logements</a>
+    <a href="index.html#unterkuenfte" class="nav-back">Zurück zu den Unterkünften</a>
     <div class="lang-switcher">
-      <a href="maison.html" class="active">FR</a>
+      <a href="../maison.html">FR</a>
       <span class="lang-sep">|</span>
-      <a href="en/maison.html">EN</a>
+      <a href="../en/maison.html">EN</a>
       <span class="lang-sep">|</span>
-      <a href="de/maison.html">DE</a>
+      <a href="maison.html" class="active">DE</a>
     </div>
   </div>
 </nav>
 
 <div class="hero-gallery">
   <div class="hero-main" onclick="openLightbox(0)">
-    <img src="photo-haut/1.jpg" alt="La Maison — Vue principale" id="hero-main-img">
+    <img src="../photo-haut/1.jpg" alt="Das Haus — Hauptansicht" id="hero-main-img">
     <div class="hero-overlay"></div>
     <div class="hero-badge">
-      <span class="badge-tag">Maison principale · 5 personnes</span>
-      <span class="badge-title">La Maison</span>
+      <span class="badge-tag">Haupthaus · 5 Gäste</span>
+      <span class="badge-title">Das Haus</span>
     </div>
   </div>
   <div class="hero-side" onclick="openLightbox(1)">
-    <img src="photo-haut/2.1.jpg" alt="La Maison" id="hero-side-1" onerror="this.src='photo-haut/2.1.jpg'">
+    <img src="../photo-haut/2.1.jpg" alt="Das Haus" id="hero-side-1" onerror="this.src='../photo-haut/2.1.jpg'">
     <div class="hero-overlay"></div>
   </div>
   <div class="hero-side" onclick="openLightbox(2)" style="position:relative;">
-    <img src="photo-haut/3.1.jpg" alt="La Maison" id="hero-side-2" onerror="this.src='photo-haut/3.1.jpg'">
+    <img src="../photo-haut/3.1.jpg" alt="Das Haus" id="hero-side-2" onerror="this.src='../photo-haut/3.1.jpg'">
     <div class="hero-overlay"></div>
-    <button class="see-all-btn" onclick="event.stopPropagation(); document.getElementById('galerie').scrollIntoView({behavior:'smooth'})">
-      Voir toutes les photos
+    <button class="see-all-btn" onclick="event.stopPropagation(); document.getElementById('gallery').scrollIntoView({behavior:'smooth'})">
+      Alle Fotos sehen
     </button>
   </div>
 </div>
@@ -479,35 +478,35 @@
 
   <div>
     <span class="listing-tag">Villa Tiglad · Concarneau, Bretagne</span>
-    <h1 class="listing-title">La Maison<br><em>Vue mer panoramique</em></h1>
+    <h1 class="listing-title">Das Haus<br><em>Panoramablick aufs Meer</em></h1>
 
     <div class="listing-meta">
-      <div class="meta-item"><span class="meta-icon">👥</span><span class="meta-text"><strong>5 personnes</strong> max.</span></div>
-      <div class="meta-item"><span class="meta-icon">🛏</span><span class="meta-text"><strong>3 chambres</strong></span></div>
-      <div class="meta-item"><span class="meta-icon">🚿</span><span class="meta-text"><strong>2 salles d'eau</strong></span></div>
+      <div class="meta-item"><span class="meta-icon">👥</span><span class="meta-text"><strong>5 Gäste</strong> max.</span></div>
+      <div class="meta-item"><span class="meta-icon">🛏</span><span class="meta-text"><strong>3 Schlafzimmer</strong></span></div>
+      <div class="meta-item"><span class="meta-icon">🚿</span><span class="meta-text"><strong>2 Badezimmer</strong></span></div>
       <div class="meta-item"><span class="meta-icon">📐</span><span class="meta-text"><strong>90 m²</strong></span></div>
-      <div class="meta-item"><span class="meta-icon">🌊</span><span class="meta-text"><strong>Accès direct</strong> GR34</span></div>
-      <div class="meta-item"><span class="meta-icon">🚗</span><span class="meta-text"><strong>Parking clos</strong> 2 véhicules</span></div>
+      <div class="meta-item"><span class="meta-icon">🌊</span><span class="meta-text"><strong>Direkter Zugang</strong> zum GR34</span></div>
+      <div class="meta-item"><span class="meta-icon">🚗</span><span class="meta-text"><strong>Geschlossener Parkplatz</strong> (2 Autos)</span></div>
     </div>
 
     <div class="rating-bar">
       <span class="rating-score">10/10</span>
       <div class="rating-label">
-        <strong>Coup de cœur · 98 avis</strong>
-        Parmi les 10 % les mieux notés dans la région Concarneau
+        <strong>Gäste-Favorit · 98 Bewertungen</strong>
+        Gehört zu den besten 10 % der am höchsten bewerteten Unterkünfte in der Region Concarneau
       </div>
     </div>
 
     <div class="description-section">
-      <h2>Un <em>havre de paix</em> face à l'Atlantique</h2>
-      <p>Découvrez le charme de la Bretagne dans cette <strong>ancienne maison de gardien de phare</strong>, entièrement rénovée, exposée ouest en impasse. En face de la ville close de Concarneau et du port de plaisance.</p>
-      <p>Vous vivrez <strong>au rythme des marées</strong>, à l'entrée et sortie des bateaux de pêche et de plaisance ; les vagues vous berceront dans un calme absolu, même en pleine saison. Spectacle permanent, toujours différent selon les heures et la luminosité.</p>
-      <p>La maison dispose de <strong>deux espaces extérieurs privatifs</strong> avec vue plongeante sur la mer : un jardin fleuri avec bains de soleil et table repas, ainsi qu'une terrasse avec salon.</p>
+      <h2>Eine <em>Oase der Ruhe</em> am atlantischen Ozean</h2>
+      <p>Entdecken Sie den Charme der Bretagne in diesem <strong>ehemaligen Leuchtturmwärterhaus</strong>, das kürzlich renoviert wurde und ruhig am Ende einer Sackgasse direkt am Meer liegt. Direkt gegenüber der Altstadt von Concarneau und dem Yachthafen.</p>
+      <p>Sie leben hier <strong>im Rhythmus der Gezeiten</strong> und können die vorbeifahrenden Fischer- und Segelboote beobachten; das Rauschen der Wellen wiegt Sie selbst in der Hochsaison in eine wunderbare Ruhe. Ein ständiges Schauspiel, das sich mit dem Licht und den Stunden wandelt.</p>
+      <p>Das Haus bietet <strong>zwei private Außenbereiche</strong> mit einem faszinierenden Blick auf das Meer: einen blühenden Garten mit Sonnenliegen und Esstisch sowie eine Terrasse mit Gartenmöbeln.</p>
     </div>
 
     <div class="description-section">
-      <h2>Un aperçu <em>immersif</em></h2>
-      <p>Prenez de la hauteur et découvrez la villa comme si vous y étiez grâce à ce survol exclusif.</p>
+      <h2>Ein <em>immersiver</em> Einblick</h2>
+      <p>Heben Sie ab und entdecken Sie die Villa mit diesem exklusiven Drohnenflug, als wären Sie bereits dort.</p>
       <div class="video-section">
         <div class="video-wrapper">
           <iframe 
@@ -523,37 +522,37 @@
     <div class="divider"></div>
 
     <div class="description-section">
-      <h2>Les <em>espaces</em></h2>
+      <h2>Die <em>Räume</em></h2>
       <div class="rooms-grid">
         <div class="room-card">
           <span class="room-icon">🛋</span>
-          <div class="room-name">Séjour / Cuisine</div>
-          <div class="room-detail">Grande pièce à vivre avec larges baies vitrées, vue imprenable sur la baie. Cuisine ouverte entièrement équipée, TV satellite, Wi-Fi.</div>
+          <div class="room-name">Wohnzimmer / Küche</div>
+          <div class="room-detail">Großer Wohnbereich mit breiten Panoramafenstern und atemberaubendem Blick auf die Bucht. Voll ausgestattete offene Küche, Sat-TV, WLAN.</div>
         </div>
         <div class="room-card">
           <span class="room-icon">🛏</span>
-          <div class="room-name">Chambre 1 — Étage</div>
-          <div class="room-detail">Lit 160×200 cm. Vue mer pleine. Volets roulants électriques.</div>
+          <div class="room-name">Schlafzimmer 1 — Obergeschoss</div>
+          <div class="room-detail">Doppelbett (160×200 cm). Direkter Meerblick. Elektrische Rollläden.</div>
         </div>
         <div class="room-card">
           <span class="room-icon">🛏</span>
-          <div class="room-name">Chambre 2 — Étage</div>
-          <div class="room-detail">Lit 160×200 cm. Vue mer pleine. Volets roulants électriques.</div>
+          <div class="room-name">Schlafzimmer 2 — Obergeschoss</div>
+          <div class="room-detail">Doppelbett (160×200 cm). Direkter Meerblick. Elektrische Rollläden.</div>
         </div>
         <div class="room-card">
           <span class="room-icon">🛏</span>
-          <div class="room-name">Chambre 3 — Étage </div>
-          <div class="room-detail">Lit 140×190 cm. Volets roulants électriques.</div>
+          <div class="room-name">Schlafzimmer 3 — Obergeschoss</div>
+          <div class="room-detail">Doppelbett (140×190 cm). Elektrische Rollläden.</div>
         </div>
         <div class="room-card">
           <span class="room-icon">🌿</span>
-          <div class="room-name">Jardin privatif</div>
-          <div class="room-detail">Bains de soleil, parasol (avril–septembre), table repas. Vue sur mer.</div>
+          <div class="room-name">Privater Garten</div>
+          <div class="room-detail">Sonnenliegen, Sonnenschirm (April–Sept.), Esstisch. Meerblick.</div>
         </div>
         <div class="room-card">
           <span class="room-icon">🏖</span>
           <div class="room-name">Terrasse</div>
-          <div class="room-detail">Petit salon extérieur. Vue panoramique sur l'océan et la ville close.</div>
+          <div class="room-detail">Kleiner Außen-Wohnbereich. Panoramablick auf den Ozean und die Altstadt.</div>
         </div>
       </div>
     </div>
@@ -561,54 +560,54 @@
     <div class="divider"></div>
 
     <div class="description-section">
-      <h2>Les <em>équipements</em></h2>
+      <h2>Die <em>Ausstattung</em></h2>
       <div class="amenities-grid">
-        <div class="amenity-item">Wi-Fi gratuit</div>
-        <div class="amenity-item">TV satellite (chaînes internationales)</div>
-        <div class="amenity-item">Cuisine entièrement équipée</div>
-        <div class="amenity-item">Lave-linge</div>
-        <div class="amenity-item">Sèche-linge</div>
-        <div class="amenity-item">Arrière-cuisine / buanderie</div>
-        <div class="amenity-item">Parking sécurisé (2 véhicules)</div>
-        <div class="amenity-item">Portail motorisé + télécommande + digicode</div>
-        <div class="amenity-item">Jardin privatif</div>
-        <div class="amenity-item">Terrasse avec salon extérieur</div>
-        <div class="amenity-item">Accès direct GR34</div>
-        <div class="amenity-item">Vue mer panoramique</div>
-        <div class="amenity-item">Bains de soleil + parasol</div>
-        <div class="amenity-item">Volets roulants électriques</div>
+        <div class="amenity-item">Kostenloses WLAN</div>
+        <div class="amenity-item">Sat-TV (internationale Kanäle)</div>
+        <div class="amenity-item">Voll ausgestattete Küche</div>
+        <div class="amenity-item">Waschmaschine</div>
+        <div class="amenity-item">Wäschetrockner</div>
+        <div class="amenity-item">Hauswirtschaftsraum</div>
+        <div class="amenity-item">Sicherer Parkplatz (2 Autos)</div>
+        <div class="amenity-item">Elektrisches Tor + Fernbedienung</div>
+        <div class="amenity-item">Privater Garten</div>
+        <div class="amenity-item">Terrasse mit Gartenmöbeln</div>
+        <div class="amenity-item">Direkter Zugang zum GR34</div>
+        <div class="amenity-item">Panoramablick aufs Meer</div>
+        <div class="amenity-item">Sonnenliegen + Sonnenschirm</div>
+        <div class="amenity-item">Elektrische Rollläden</div>
       </div>
     </div>
   </div>
 
   <aside>
     <div class="booking-card">
-      <span class="booking-card-tag">Réserver ce logement</span>
-      <div class="booking-card-title">La Maison<br>5 personnes · 3 chambres</div>
-      <div class="booking-capacity">90 m² · Vue mer · Accès GR34 direct</div>
+      <span class="booking-card-tag">Unterkunft reservieren</span>
+      <div class="booking-card-title">Das Haus<br>5 Gäste · 3 Schlafzimmer</div>
+      <div class="booking-capacity">90 m² · Meerblick · Direkter GR34 Zugang</div>
 
       <div class="booking-platforms">
-        <a href="https://www.abritel.fr/location-vacances/p1585538" target="_blank" class="btn-platform btn-platform-primary">
-          FR - Réserver sur Abritel
+        <a href="https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p1585538a" target="_blank" class="btn-platform btn-platform-primary">
+          DE - Auf FeWo-direkt buchen
         </a>
-        <a href="https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p1585538a" target="_blank" class="btn-platform btn-platform-outline">
-          DE - FeWo-direkt
+        <a href="https://www.abritel.fr/location-vacances/p1585538" target="_blank" class="btn-platform btn-platform-outline">
+          FR - Auf Abritel buchen
         </a>
         <a href="https://www.homeaway.co.uk/p1585538a" target="_blank" class="btn-platform btn-platform-outline">
-          UK - HomeAway
+          UK - Auf HomeAway buchen
         </a>
       </div>
 
-      <div class="booking-divider">ou contactez-nous directement</div>
+      <div class="booking-divider">oder kontaktieren Sie uns direkt</div>
 
       <div class="contact-direct">
-        <a href="tel:+33633404180" class="contact-line">
-          <span class="contact-line-label">📞 Français</span>
-          <span class="contact-line-value">06 33 40 41 80</span>
-        </a>
         <a href="tel:+33622824177" class="contact-line">
-          <span class="contact-line-label">📞 English</span>
-          <span class="contact-line-value">06 22 82 41 77</span>
+          <span class="contact-line-label">📞 Englisch</span>
+          <span class="contact-line-value">+33 6 22 82 41 77</span>
+        </a>
+        <a href="tel:+33633404180" class="contact-line">
+          <span class="contact-line-label">📞 Französisch</span>
+          <span class="contact-line-value">+33 6 33 40 41 80</span>
         </a>
         <a href="mailto:concarneau@tiglad.fr" class="contact-line">
           <span class="contact-line-label">✉ Email</span>
@@ -617,19 +616,19 @@
       </div>
 
       <div class="note">
-        Réservation directe possible par téléphone ou email. Nous répondons sous 24h.
+        Eine direkte Buchung ist per Telefon oder E-Mail möglich. Wir antworten innerhalb von 24 Stunden.
       </div>
     </div>
   </aside>
 
 </div>
 
-<section class="gallery-section" id="galerie">
+<section class="gallery-section" id="gallery">
   <div class="gallery-section-inner">
     <div class="gallery-header">
-      <span class="listing-tag">Galerie photos</span>
+      <span class="listing-tag">Bildergalerie</span>
       <h2 style="font-family:var(--serif); font-size:clamp(1.8rem,3vw,2.8rem); font-weight:300; color:var(--white);">
-        La Maison en <em style="font-style:italic; color:var(--gold-light);">images</em>
+        Das Haus in <em style="font-style:italic; color:var(--gold-light);">Bildern</em>
       </h2>
     </div>
     <div class="gallery-grid" id="gallery-grid">
@@ -640,17 +639,17 @@
 <section class="location-section">
   <div class="location-inner">
     <div>
-      <span class="listing-tag">Localisation</span>
+      <span class="listing-tag">Lage</span>
       <h2 style="font-family:var(--serif); font-size:clamp(1.8rem,3vw,2.8rem); font-weight:300; color:var(--white); margin-bottom:1rem;">
-        <em style="font-style:italic; color:var(--gold-light);">Concarneau</em>,<br>Bretagne Sud
+        <em style="font-style:italic; color:var(--gold-light);">Concarneau</em>,<br>Südbretagne
       </h2>
       <div class="divider"></div>
       <ul class="location-list">
-        <li><span class="distance">10'</span><span>Ville close de Concarneau — chemin des douaniers + petit bac</span></li>
-        <li><span class="distance">10'</span><span>Piscine municipale · Plage de sable · Boulangerie, boucherie, supérette</span></li>
-        <li><span class="distance">30'</span><span>Pont-Aven, cité des peintres · Quimper, cathédrale et faïences</span></li>
-        <li><span class="distance">45'</span><span>Archipel des Glénan · Pointe du Raz · Locronan</span></li>
-        <li><span class="distance">↑</span><span>Accès direct et privatif au sentier côtier GR34</span></li>
+        <li><span class="distance">10'</span><span>Zur Altstadt — über den Küstenweg + kleine Fähre</span></li>
+        <li><span class="distance">10'</span><span>Schwimmbad · Sandstrand · Bäckerei, Metzgerei, Minimarkt</span></li>
+        <li><span class="distance">30'</span><span>Pont-Aven, das Dorf der Maler · Quimper, Kathedrale und Keramik</span></li>
+        <li><span class="distance">45'</span><span>Glénan-Archipel · Pointe du Raz · Locronan</span></li>
+        <li><span class="distance">↑</span><span>Direkter und privater Zugang zum Küstenweg GR34</span></li>
       </ul>
     </div>
     <div class="embed-map-responsive"><div class="embed-map-container"><iframe class="embed-map-frame" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Concarneau&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe></div><style>.embed-map-responsive{position:relative;text-align:right;width:100%;height:0;padding-bottom:66.66666666666666%;}.embed-map-container{overflow:hidden;background:none!important;width:100%;height:100%;position:absolute;top:0;left:0;}.embed-map-frame{width:100%!important;height:100%!important;position:absolute;top:0;left:0;}</style></div>
@@ -660,14 +659,14 @@
 <footer>
   <span class="footer-brand">Villa Tiglad · Concarneau</span>
   <div class="footer-links">
-    <a href="index.html">Accueil</a>
-    <a href="appartement.html">L'Appartement</a>
-    <a href="index.html#contact">Contact</a>
+    <a href="index.html">Startseite</a>
+    <a href="appartement.html">Die Wohnung</a>
+    <a href="index.html#kontakt">Kontakt</a>
   </div>
 </footer>
 
 <div class="lightbox" id="lightbox">
-  <button class="lightbox-close" onclick="closeLightbox()">✕ Fermer</button>
+  <button class="lightbox-close" onclick="closeLightbox()">✕ Schließen</button>
   <img class="lightbox-img" id="lightbox-img" src="" alt="">
   <div class="lightbox-nav">
     <button class="lightbox-btn" onclick="prevPhoto()">←</button>
@@ -677,7 +676,7 @@
 </div>
 
 <script>
-const PHOTO_DIR = 'photo-haut/';
+const PHOTO_DIR = '../photo-haut/';
 const HERO_PHOTO = '1.jpg';
 
 const knownPhotos = [
@@ -711,7 +710,7 @@ function buildGallery(photos) {
 
     const img = document.createElement('img');
     img.src = PHOTO_DIR + photo;
-    img.alt = 'La Maison — photo ' + (i + 1);
+    img.alt = 'Das Haus — Foto ' + (i + 1);
     img.loading = 'lazy';
     img.onerror = function() { this.parentElement.style.display = 'none'; };
     item.appendChild(img);
